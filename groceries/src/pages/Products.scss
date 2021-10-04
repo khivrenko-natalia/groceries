@@ -1,0 +1,10 @@
+@import "../styles/mixins";
+@import "../styles/variables";
+
+.products-list {
+    @include flex($gap: 23px, $wrap: wrap);
+}
+
+.content {
+    padding: 1.5rem 6.25rem;
+}

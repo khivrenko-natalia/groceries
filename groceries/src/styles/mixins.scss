@@ -1,0 +1,19 @@
+@import "./variables";
+
+@mixin typography($size: 1rem, $weight: $font-normal, $spacing: 0, $line-height: 1, $color: $text-base) {
+    color: $color;
+    font-family: $default-font;
+    font-size: $size;
+    font-weight: $weight;
+    letter-spacing: $spacing;
+    line-height: $line-height;
+}
+
+@mixin flex($align-items: center, $gap: 0, $justify: flex-start, $direction: row, $wrap: unset) {
+    align-items: $align-items;
+    display: flex;
+    flex-direction: $direction;
+    flex-wrap: $wrap;
+    gap: $gap;
+    justify-content: $justify;  
+}

@@ -1,0 +1,43 @@
+@import "../../styles/mixins";
+@import "../../styles/variables";
+
+.cart-product {
+    @include flex($gap: 0.5rem);
+}
+
+.cart-product-name {
+    @include typography(12px, $font-bold);
+}
+
+
+.cart-product-image {
+    height: auto;
+    text-align: center;
+    width: 150px;
+
+    & > img {
+        box-sizing: border-box;
+        height: auto;
+        max-height: 100%;
+        max-width: 100%;
+        width: auto;
+    }
+}
+
+.cart-product-price {
+    @include typography(14px, $font-bold, $spacing: 0.25px, $color: black);
+}
+
+.quantity-control {
+    width: 100%;
+}
+
+.cart-amount {
+    @include flex($gap: 2rem, $justify: space-between);
+    width: 100%;
+}
+
+.card-info {
+    @include flex($gap: 0.5rem, $direction: column);
+    width: 100%;
+}

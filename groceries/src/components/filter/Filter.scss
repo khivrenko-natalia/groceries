@@ -1,0 +1,31 @@
+@import "../../styles/mixins";
+@import "../../styles/variables";
+
+.filter {
+    margin: 0 0 2.5rem;
+}
+
+.filter-title {
+    @include typography(12px, $font-bold, 0.25px, 14px);
+    margin: 0 0 1rem;
+    padding: 0;
+}
+
+.categories {
+    @include flex($gap: 9px, $wrap: wrap);
+    padding: 0 0 9px;
+}
+
+.category {
+    @include typography(14px, $line-height: 16px, $color: black);
+    border: 1px solid $border;
+    border-radius: 20px;
+    cursor: pointer;
+    padding: 7px 17px 7px 15px;
+
+    &:hover,
+    &.selected {
+        border-color: $primary;
+        color: $primary
+    }
+}

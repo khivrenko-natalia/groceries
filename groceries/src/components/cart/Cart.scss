@@ -1,0 +1,52 @@
+@import "../../styles/mixins";
+@import "../../styles/variables";
+
+.cart {
+    align-self: stretch;
+    border-left: 1px solid $border;
+    height: 100vh;
+    overflow: auto;
+    padding: 0 24px 24px;
+    position: sticky;
+    top: 0;
+    transition: all .3s ease-out;
+    transform: translateX(0%);
+}
+
+.cart.opened {
+    display: block;
+    min-width: 325px;
+    width: 325px;
+}
+
+.cart.closed {
+    display: none;
+    min-width: 0;
+    transform: translateX(100%);
+}
+
+.cart-header {
+    @include flex($justify: space-between);
+    h5 {
+        @include typography(16px, 700);
+    }
+}
+ 
+.cart-named {
+    @include flex($justify: space-between);
+
+    img.remove-item {
+        cursor: pointer;
+        height: 14px;
+    }
+}
+
+.total-sum {
+    @include typography(16px, 700);
+    margin: 1.5rem 0;
+    text-align: right;
+}
+
+.fold {
+    cursor: pointer;
+}
